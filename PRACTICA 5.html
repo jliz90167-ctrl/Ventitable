@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Escolar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+header{
+    background:#0b3b91;
+    color:white;
+    padding:15px 30px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff6b35;
+}
+
+.subtitulo{
+    font-size:14px;
+}
+
+nav{
+    background:#0f4cb5;
+    padding:12px 20px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+.bienvenida{
+    background:linear-gradient(135deg,#0047cc,#0d6efd);
+    color:white;
+    text-align:center;
+    padding:50px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.bienvenida h1{
+    margin-bottom:15px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#555;
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.card p{
+    font-size:40px;
+    color:#0b3b91;
+    font-weight:bold;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+.box h2{
+    margin-bottom:15px;
+    color:#0b3b91;
+}
+
+.box ul{
+    list-style:none;
+}
+
+.box li{
+    padding:6px 0;
+    border-bottom:1px solid #eee;
+}
+
+@media(max-width:900px){
+    .info{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">JCM</div>
+    <h2>Colegio José Clemente Maure de Azari</h2>
+    <div class="subtitulo">Sistema Escolar de Gestión Escolar</div>
+</header>
+
+<nav>
+    <ul>
+            
+        <li><a href="#">🏠Inicio</a></li>
+        <li><a href="#">📝Registro</a></li>
+        <li><a href="#">👨‍🎓Estudiantes</a></li>
+        <li><a href="#">📄Kardex</a></li>
+        <li><a href="#">👨‍🏫Maestros</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="bienvenida">
+        <h1><a>16462663.png </a> Bienvenido al Sistema Escolar</h1>
+        <p>
+            Gestión académica integral para el Colegio José Clemente Maure de Azari
+        </p>
+        <p>
+            Registro de estudiantes, control de notas y kardex académico completo
+        </p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Estudiantes Totales</h3>
+            <p>4</p>
+        </div>
+
+        <div class="card">
+            <h3>Varones</h3>
+            <p>2</p>
+        </div>
+
+        <div class="card">
+            <h3>Hembras</h3>
+            <p>2</p>
+        </div>
+
+        <div class="card">
+            <h3>Materias</h3>
+            <p>14</p>
+        </div>
+
+        <div class="card">
+            <h3>Maestros</h3>
+            <p>8</p>
+        </div>
+    </div>
+
+    <div class="info">
+
+        <div class="box">
+            <h2>Año Escolar 2026</h2>
+            <ul>
+                <li>Periodo: Enero - Diciembre 2026</li>
+                <li>Trimestres: 3 periodos</li>
+                <li>Días hábiles registrados: 14</li>
+                <li>Nota mínima aprobatoria: 70</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Información del Colegio</h2>
+            <ul>
+                <li>Colegio José Clemente Maure</li>
+                <li>Azari, Bolivia </li>
+                <li>Control Total: Director</li>
+                <li>Acceso Actual: Maestros</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Materias del Plan (14)</h2>
+            <ul>
+                <li>Matemáticas</li>
+                <li>Lengua y Literatura</li>
+                <li>Biología</li>
+                <li>Química</li>
+                <li>Física</li>
+                <li>Historia Universal</li>
+                <li>Geografía</li>
+                <li>Inglés</li>
+                <li>Educación Física</li>
+                <li>Arte y Cultura</li>
+                <li>Computación</li>
+                <li>Filosofía</li>
+                <li>Educación para la Salud</li>
+                <li>Orientación</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

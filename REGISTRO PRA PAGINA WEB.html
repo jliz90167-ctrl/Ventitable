@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI REGISTRO</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        linear-gradient(rgba(74,45,25,0.65), rgba(74,45,25,0.65)),
+        linear-gradient(135deg, #d7b899, #8b5e3c);
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:420px;
+    background:#f7efe5;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.35),
+        0 5px 10px rgba(0,0,0,0.15);
+    border:2px solid #c49a6c;
+}
+
+/* TITULO */
+
+h1{
+    text-align:center;
+    color:#5a351f;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+/* ETIQUETAS */
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#5a351f;
+}
+
+/* CAMPOS */
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:3px;
+    border:1px solid #c9a27e;
+    border-radius:8px;
+    background:#fffaf5;
+    color:#4a2e1c;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    outline:none;
+    transition:0.3s;
+}
+
+/* EFECTO AL SELECCIONAR */
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#7b4a2f;
+    box-shadow:0 0 6px rgba(123,74,47,0.4);
+    background:#ffffff;
+}
+
+/* FECHA */
+
+input[type="date"]{
+    color:#5a351f;
+}
+
+/* TEXTAREA */
+
+textarea{
+    height:100px;
+    resize:none;
+}
+
+/* BOTÓN */
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:13px;
+    background:#5a351f;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-family:Arial, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* EFECTO DEL BOTÓN */
+
+button:hover{
+    background:#7b4a2f;
+    transform:translateY(-2px);
+    box-shadow:0 7px 15px rgba(0,0,0,0.3);
+}
+
+/* EFECTO AL PRESIONAR */
+
+button:active{
+    transform:translateY(0);
+}
+
+/* DISEÑO PARA CELULAR */
+
+@media(max-width:500px){
+
+    .contenedor{
+        width:90%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Formulario de registro</h1>
+
+    <form action="index.html" method="get">
+
+        <label>Nombre:</label>
+        <input type="text" placeholder="Ingrese su nombre">
+
+        <label>Fecha de nacimiento:</label>
+        <input type="date">
+
+        <label>Edad:</label>
+        <input type="number" placeholder="Ingrese su edad">
+
+        <label>Género:</label>
+        <select>
+            <option>Masculino</option>
+            <option>Femenino</option>
+        </select>
+
+        <label>Ciudad:</label>
+        <input type="text" placeholder="Ingrese su ciudad">
+
+        <label>Correo:</label>
+        <input type="email" placeholder="Ingrese su correo">
+
+        <label>Ocupación:</label>
+        <select>
+            <option>Estudiante</option>
+            <option>Profesional</option>
+            <option>Ama de casa</option>
+        </select>
+
+        <label>Nombre o nick:</label>
+        <input type="text" placeholder="Ingrese su nombre o nick">
+
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Ingrese su contraseña">
+
+        <button type="submit">Registrarse</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+```

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar - Colegio José Clemente Maure de Azari</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+        body {background-color: #f5f6fa;}
+        /* Barra superior navegación */
+        .top-nav {background-color: #176ef0; color: #fff; display: flex; align-items: center; padding: 0.7rem 2rem; gap: 2rem;}
+        .logo-area {display: flex; align-items: center; gap: 0.5rem;}
+        .logo-circle {width: 32px; height: 32px; background-color: #ff7a45; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;}
+        .nav-links {display: flex; gap: 2rem;}
+        .nav-links a {color: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.3rem; opacity: 0.9;}
+        .nav-links a:hover {opacity: 1;}
+        .user-area {margin-left: auto;}
+        .user-area a {color: #fff; text-decoration: none; opacity: 0.9;}
+        /* Banner principal */
+        .welcome-banner {background-color: #176ef0; color: #fff; margin: 1rem 2rem; padding: 2.5rem; border-radius: 8px; text-align: center; position: relative; overflow: hidden;}
+        .school-icon {font-size: 3rem; margin-bottom: 0.8rem; opacity: 0.8;}
+        .welcome-banner h1 {font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 500;}
+        .welcome-banner p {font-size: 0.95rem; opacity: 0.9; line-height: 1.4;}
+        /* Tarjetas estadísticas */
+        .stats-row {display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin: 0 2rem;}
+        .stat-card {background-color: #fff; padding: 1.2rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);}
+        .stat-label {font-size: 0.85rem; color: #080101; margin-bottom: 0.5rem;}
+        .stat-number {font-size: 1.6rem; font-weight: bold; color: #0bfc5b;}
+        /* Secciones inferiores */
+        .bottom-sections {display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin: 2rem;}
+        .section-card {background-color: #fff; padding: 1.5rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);}
+        .section-title {font-size: 1rem; font-weight: 600; color: #000307; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;}
+        .info-item {margin-bottom: 0.7rem; font-size: 0.9rem; color: #050000; line-height: 1.4;}
+        .subjects-list {display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; color: #444;}
+
+    
+.espacio{
+    height: 100px;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+.box h2{
+    margin-bottom:15px;
+    color:#0b3b91;
+}
+
+.box ul{
+    list-style:none;
+}
+
+.box li{
+    padding:6px 0;
+    border-bottom:1px solid #eee;
+}
+
+@media(max-width:900px){
+    .info{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+    <!-- Barra superior -->
+    <div class="top-nav">
+        <div class="logo-area">
+            <div class="logo-circle">JCM</div>
+            <div>
+                <div style="font-weight: bold;">Colegio José Clemente Maure de Azari</div>
+                <div style="font-size: 0.8rem; opacity: 0.8;">Sistema Integral de Gestión Escolar</div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#"> 🏠Inicio</a>
+            <a href="#">📝 Registro</a>
+            <a href="#">👨‍🎓 Estudiantes</a>
+            <a href="#">📄 Kardex</a>
+            <a href="#">👨‍🏫 Maestro</a>
+        </div>
+        <div class="user-area">
+            <a href="#">👤 Doctor</a>
+        </div>
+    </div>
+
+    
+    <div class="welcome-banner">
+        <div class="school-icon">🏫</div>
+        <h1>Bienvenido al Sistema Escolar</h1>
+        <p>Gestión académica integral para el Colegio José Clemente Maurer de Azari<br>Registro de estudiantes, control de notas y kardex académico completo.</p>
+    </div>
+
+    
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-label">👨‍🎓 Estudiantes totales</div>
+            <div class="stat-number">428</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">♂ Varones</div>
+            <div class="stat-number">213</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">♀ Mujeres</div>
+            <div class="stat-number">215</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">📚 Materias</div>
+            <div class="stat-number">14</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">👨‍🏫 Maestros</div>
+            <div class="stat-number">20</div>
+        </div>
+    </div>
+           
+        
+    <div class="info">
+
+        <div class="box">
+            <h2>📅Año Escolar 2026📅</h2>
+            <ul>
+                <li>☺Periodo: Enero - Diciembre 2026</li>
+                <li>🗓Trimestres: 3 periodos</li>
+                <li>📌 Materias registradas: 14</li>
+                <li>✅Nota mínima aprobatoria: 51</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>ⓘInformación del Colegioⓘ</h2>
+            <ul>
+                <li>🏫Colegio José Clemente Maure</li>
+                <li>Azari, Bolivia </li>
+                <li>🔒Control Total: Director</li>
+                <li>🔓Acceso Actual: Maestros</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Materias del Plan (14)</h2>
+            <ul>
+                <li>Matemáticas</li>
+                <li> Literatura</li>
+                <li>Biología</li>
+                <li>Química</li>
+                <li>Física</li>
+                <li>Historia Universal</li>
+                <li>Geografía</li>
+                <li>Inglés</li>
+                <li>Educación Física</li>
+                <li>Arte y Cultura</li>
+                <li>Computación</li>
+                <li>Filosofía</li>
+                <li>Educación Fisica</li>
+                <li>Música</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI REGISTRO</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f0f0f0;
+}
+
+.contenedor{
+    width:400px;
+    margin:40px auto;
+    background:#66ff66;
+    padding:20px;
+    border-radius:5px;
+}
+
+h1{
+    text-align:center;
+    color:#666;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+}
+
+textarea{
+    height:100px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#00cc44;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00aa33;
+}
+</style>
+
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>Registro de estudiantes</h1>
+
+    <form>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Ingrese su nombre">
+
+        <label>Correo:</label>
+        <input type="email" placeholder="Ingrese su correo">
+
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Ingrese su contraseña">
+
+        <label>Género:</label>
+        <select>
+            <option>Masculino</option>
+            <option>Femenino</option>
+        </select>
+
+        <label>Mensaje:</label>
+        <textarea placeholder="Escriba su mensaje"></textarea>
+
+        <button type="submit">registrado</button>
+    </form>
+</div>
+
+</body>
+</html>

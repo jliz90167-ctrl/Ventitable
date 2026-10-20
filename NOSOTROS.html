@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nosotros - Ventitable</title>
+
+<style>
+
+/* CONFIGURACIÓN GENERAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:
+        linear-gradient(rgba(70,43,25,0.75), rgba(70,43,25,0.75)),
+        linear-gradient(135deg, #d8b894, #6b4328);
+    color:#3e2819;
+}
+
+/* ENCABEZADO */
+
+header{
+    background:#4b2e1e;
+    color:white;
+    padding:25px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.35);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d9ad7c;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d9ad7c;
+}
+
+/* PORTADA */
+
+.portada{
+    min-height:330px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+
+    background:
+        linear-gradient(rgba(65,39,23,0.65), rgba(65,39,23,0.65)),
+        linear-gradient(135deg,#9a6b45,#d8b894);
+}
+
+.portada h1{
+    font-size:55px;
+    color:#fff8ef;
+    margin-bottom:15px;
+}
+
+.portada p{
+    max-width:700px;
+    font-size:20px;
+    color:#f7e8d5;
+    line-height:1.6;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+}
+
+/* TITULOS */
+
+.titulo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.titulo h2{
+    font-size:32px;
+    color:#5a351f;
+    margin-bottom:10px;
+}
+
+.titulo p{
+    color:#6d4a31;
+    font-size:17px;
+}
+
+/* TARJETAS */
+
+.tarjetas{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.tarjeta{
+    background:#f8efe4;
+    padding:30px;
+    border-radius:18px;
+    border:2px solid #c49a6c;
+    box-shadow:0 8px 20px rgba(0,0,0,0.20);
+    transition:0.3s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.30);
+}
+
+.tarjeta h2{
+    color:#5a351f;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.tarjeta p{
+    color:#5b4433;
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* UBICACIÓN */
+
+.ubicacion{
+    margin-top:30px;
+    background:#5a351f;
+    color:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.ubicacion h2{
+    color:#e4bd91;
+    margin-bottom:15px;
+    font-size:27px;
+}
+
+.ubicacion p{
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* VALORES */
+
+.valores{
+    margin-top:30px;
+}
+
+.lista-valores{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.valor{
+    background:#ead7c0;
+    padding:20px 10px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #bd9167;
+    transition:0.3s;
+}
+
+.valor:hover{
+    background:#d9b894;
+    transform:translateY(-5px);
+}
+
+.valor h3{
+    color:#5a351f;
+    margin-bottom:8px;
+}
+
+.valor p{
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* COMPROMISO */
+
+.compromiso{
+    margin-top:30px;
+    background:#f8efe4;
+    padding:35px;
+    border-radius:18px;
+    border-left:8px solid #6b4328;
+    box-shadow:0 8px 20px rgba(0,0,0,0.18);
+}
+
+.compromiso h2{
+    color:#5a351f;
+    margin-bottom:15px;
+}
+
+.compromiso p{
+    line-height:1.7;
+}
+
+/* FRASE FINAL */
+
+.frase{
+    text-align:center;
+    padding:55px 20px;
+    color:white;
+}
+
+.frase h2{
+    font-size:30px;
+    color:#f0cda5;
+    margin-bottom:15px;
+}
+
+.frase p{
+    font-size:22px;
+    font-style:italic;
+}
+
+/* PIE DE PÁGINA */
+
+footer{
+    background:#3a2417;
+    color:#ead7c0;
+    text-align:center;
+    padding:25px;
+    margin-top:20px;
+}
+
+footer p{
+    margin:5px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    .tarjetas{
+        grid-template-columns:1fr;
+    }
+
+    .lista-valores{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 8px;
+    }
+}
+
+@media(max-width:500px){
+
+    .portada h1{
+        font-size:40px;
+    }
+
+    .portada p{
+        font-size:17px;
+    }
+
+    .lista-valores{
+        grid-template-columns:1fr;
+    }
+
+    .logo{
+        font-size:25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- ENCABEZADO -->
+
+<header>
+
+    <div class="logo">
+        <span>V</span>entitable
+    </div>
+
+   
+
+</header>
+
+
+<!-- PORTADA -->
+
+<section class="portada">
+
+    <h1>Nosotros</h1>
+
+    <p>
+        Conoce más sobre Ventitable, nuestra tienda de muebles,
+        nuestra misión, nuestra visión y el compromiso que tenemos
+        con nuestros clientes.
+    </p>
+
+</section>
+
+
+<!-- CONTENIDO -->
+
+<div class="contenedor">
+
+
+    <div class="titulo">
+
+        <h2>¿Quiénes somos?</h2>
+
+        <p>
+            Conoce nuestra historia y lo que representa Ventitable.
+        </p>
+
+    </div>
+
+
+    <div class="tarjetas">
+
+
+        <!-- QUIENES SOMOS -->
+
+        <div class="tarjeta">
+
+            <h2>🪑 ¿Quiénes somos?</h2>
+
+            <p>
+                Somos <b>Ventitable</b>, una página web dedicada a la
+                venta y exhibición de muebles para el hogar.
+                Nuestro objetivo es ofrecer a nuestros clientes
+                una forma sencilla, cómoda y moderna de conocer
+                diferentes opciones de muebles desde cualquier lugar.
+            </p>
+
+            <br>
+
+            <p>
+                Buscamos combinar la tecnología con la venta
+                tradicional de muebles, permitiendo que nuestros
+                clientes conozcan nuestros productos y encuentren
+                opciones que se adapten a sus necesidades.
+            </p>
+
+        </div>
+
+
+        <!-- QUE OFRECEMOS -->
+
+        <div class="tarjeta">
+
+            <h2>🛋️ ¿Qué ofrecemos?</h2>
+
+            <p>
+                En <b>Ventitable</b> ofrecemos diferentes tipos de
+                muebles pensados para distintos espacios del hogar,
+                como salas, dormitorios, comedores y otros ambientes.
+            </p>
+
+            <br>
+
+            <p>
+                Presentamos nuestros productos de una manera
+                organizada y atractiva, mostrando sus características
+                para que nuestros clientes puedan conocerlos y elegir
+                la opción que más se adapte a sus necesidades.
+            </p>
+
+        </div>
+
+
+        <!-- MISION -->
+
+        <div class="tarjeta">
+
+            <h2>🎯 Nuestra misión</h2>
+
+            <p>
+                Nuestra misión es facilitar la búsqueda y compra
+                de muebles mediante una página web práctica,
+                ordenada y fácil de utilizar.
+            </p>
+
+            <br>
+
+            <p>
+                Brindamos información clara sobre nuestros productos
+                y buscamos ofrecer una buena experiencia a nuestros
+                clientes, utilizando la tecnología como una herramienta
+                para acercarnos a más personas.
+            </p>
+
+        </div>
+
+
+        <!-- VISION -->
+
+        <div class="tarjeta">
+
+            <h2>👁️ Nuestra visión</h2>
+
+            <p>
+                Nuestra visión es convertir a <b>Ventitable</b> en
+                una página reconocida por ofrecer muebles de calidad,
+                diseños atractivos y una atención responsable.
+            </p>
+
+            <br>
+
+            <p>
+                Queremos seguir creciendo y utilizando las nuevas
+                tecnologías para llegar a más clientes, mejorar
+                nuestros servicios y facilitar el acceso a nuestros
+                productos.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- UBICACIÓN -->
+
+    <div class="ubicacion">
+
+        <h2>📍 Nuestra ubicación estratégica</h2>
+
+        <p>
+            Ventitable cuenta con una ubicación estratégica y de fácil
+            acceso, situada en un lugar por donde transitan
+            constantemente vehículos provenientes de diferentes
+            provincias y comunidades cercanas a la ciudad.
+        </p>
+
+        <br>
+
+        <p>
+            Esta ubicación nos permite tener una mayor visibilidad
+            y acercar nuestros productos a una mayor cantidad de
+            personas. Además, facilita que los clientes que ingresan
+            o salen de la ciudad puedan encontrar nuestra tienda
+            con mayor facilidad.
+        </p>
+
+        <br>
+
+        <p>
+            Nuestra ubicación física, junto con nuestra página web,
+            nos permite llegar a más clientes y ofrecerles una manera
+            práctica de conocer nuestros productos antes de visitar
+            nuestra tienda.
+        </p>
+
+    </div>
+
+
+    <!-- VALORES -->
+
+    <div class="valores">
+
+        <div class="titulo">
+
+            <h2>⭐ Nuestros valores</h2>
+
+            <p>
+                Los principios que nos ayudan a brindar un buen servicio.
+            </p>
+
+        </div>
+
+
+        <div class="lista-valores">
+
+
+            <div class="valor">
+
+                <h3>Responsabilidad</h3>
+
+                <p>
+                    Cumplimos con nuestros compromisos y buscamos
+                    brindar una atención responsable.
+                </p>
+
+            </div>
+
+
+            <div class="valor">
+
+                <h3>Calidad</h3>
+
+                <p>
+                    Buscamos ofrecer productos que respondan a las
+                    necesidades de nuestros clientes.
+                </p>
+
+            </div>
+
+
+            <div class="valor">
+
+                <h3>Confianza</h3>
+
+                <p>
+                    Brindamos información clara y transparente sobre
+                    nuestros productos.
+                </p>
+
+            </div>
+
+
+            <div class="valor">
+
+                <h3>Innovación</h3>
+
+                <p>
+                    Utilizamos la tecnología para mejorar la experiencia
+                    de nuestros clientes.
+                </p>
+
+            </div>
+
+
+            <div class="valor">
+
+                <h3>Atención</h3>
+
+                <p>
+                    Escuchamos las necesidades de nuestros clientes
+                    y buscamos atenderlos de manera adecuada.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- COMPROMISO -->
+
+    <div class="compromiso">
+
+        <h2>💡 Nuestro compromiso</h2>
+
+        <p>
+            En <b>Ventitable</b> nos comprometemos a seguir mejorando
+            nuestra forma de ofrecer y presentar nuestros productos.
+            Queremos que nuestros clientes puedan encontrar muebles
+            para sus hogares de una manera más sencilla, cómoda y
+            accesible.
+        </p>
+
+        <br>
+
+        <p>
+            Nuestra tienda física y nuestra página web trabajan juntas
+            para brindar una experiencia más completa, permitiendo que
+            nuestros clientes conozcan nuestros productos antes de
+            visitarnos y puedan acercarse a nuestra tienda cuando
+            encuentren algo que sea de su interés.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- FRASE FINAL -->
+
+<section class="frase">
+
+    <h2>Ventitable</h2>
+
+    <p>
+        “Haciendo de tu espacio un lugar más cómodo,
+        bonito y especial.”
+    </p>
+
+</section>
+
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+    <p><b>VENTITABLE</b></p>
+
+    <p>Venta de muebles para tu hogar</p>
+
+    <p>© 2026 Ventitable - Todos los derechos reservados</p>
+
+</footer>
+
+
+</body>
+</html>
+```
